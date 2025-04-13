@@ -33,7 +33,16 @@ function ExpenseForm({ addExpense }) {
 
   return (
     <form onSubmit={handleSubmit} className="expense-form">
-     
+      <div className="form-group">
+        <label>Expense name</label>
+        <input
+          type="text"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+        />
+      </div>
       <div className="form-group">
         <label>Description</label>
         <input
@@ -54,9 +63,9 @@ function ExpenseForm({ addExpense }) {
         >
           <option value="" disabled>Select category</option>
           <option value="Food">Food</option>
-          <option value="">Utilities</option>
+          <option value="<Necessities">Necessities</option>
           <option value="Personal">Personal</option>
-          <option value="Material">Material</option>
+          <option value="Other">Other</option>
         </select>
       </div>
       <div className="form-group">
