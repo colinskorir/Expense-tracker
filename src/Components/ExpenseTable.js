@@ -24,4 +24,13 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
           <th>Actions</th>
         </tr>
       </thead>
-      
+      <tbody>
+        {expenses.map((expense) => (
+          <tr key={expense.id}>
+            <td>{expense.description}</td>
+            <td>${parseFloat(expense.amount).toFixed(2)}</td>
+            <td>{expense.category}</td>
+            <td>{expense.date}</td>
+            <td>
+}
+
