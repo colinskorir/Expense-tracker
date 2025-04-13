@@ -23,5 +23,18 @@ function App() {
       expense.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  return (
+    <div className="app-container">
+      <h1>Expense Tracker</h1>
+      <SearchBar setSearchTerm={setSearchTerm} />
+      <ExpenseForm addExpense={addExpense} />
+      <ExpenseTable
+        expenses={filteredExpenses}
+        deleteExpense={deleteExpense}
+        setExpenses={setExpenses}
+      />
+    </div>
+  );
+}
 
 export default App;
