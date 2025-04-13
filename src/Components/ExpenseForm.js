@@ -41,4 +41,12 @@ function ExpenseForm({ addExpense }) {
         placeholder="Description"
         required
       />
+      <input
+        type="number"
+        name="amount"
+        value={formData.amount}
+        onChange={handleChange}
+        placeholder="Amount"
+        required
+      />
       
