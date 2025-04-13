@@ -26,13 +26,21 @@ function App() {
   return (
     <div className="app-container">
       <h1>Expense Tracker</h1>
-      <SearchBar setSearchTerm={setSearchTerm} />
-      <ExpenseForm addExpense={addExpense} />
-      <ExpenseTable
-        expenses={filteredExpenses}
-        deleteExpense={deleteExpense}
-        setExpenses={setExpenses}
-      />
+      <div className="main-content">
+        <div className="form-section">
+          <h2>Add Expense</h2>
+          <ExpenseForm addExpense={addExpense} />
+        </div>
+        <div className="table-section">
+          <h2>Your Expenses</h2>
+          <SearchBar setSearchTerm={setSearchTerm} />
+          <ExpenseTable
+            expenses={filteredExpenses}
+            deleteExpense={deleteExpense}
+            setExpenses={setExpenses}
+          />
+        </div>
+      </div>
     </div>
   );
 }

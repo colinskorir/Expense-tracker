@@ -1,3 +1,4 @@
+// src/components/ExpenseTable.js
 import React from 'react';
 
 function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
@@ -12,13 +13,14 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
     <table className="expense-table">
       <thead>
         <tr>
-          <th onClick={() => sortExpenses('description')}>
-            Description 
+          
+          <th onClick={() => sortExpenses('descriptionDetail')}>
+            Description
+          </th>
+          <th onClick={() => sortExpenses('category')}>
+            Category
           </th>
           <th>Amount</th>
-          <th onClick={() => sortExpenses('category')}>
-            Category 
-          </th>
           <th>Date</th>
           <th>Actions</th>
         </tr>
@@ -27,8 +29,9 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
         {expenses.map((expense) => (
           <tr key={expense.id}>
             <td>{expense.description}</td>
-            <td>${parseFloat(expense.amount).toFixed(2)}</td>
+            <td>{expense.descriptionDetail || '-'}</td>
             <td>{expense.category}</td>
+            <td>Ksh {parseFloat(expense.amount).toFixed(2)}</td>
             <td>{expense.date}</td>
             <td>
               <button

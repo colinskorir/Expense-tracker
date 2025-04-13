@@ -1,3 +1,4 @@
+// src/components/ExpenseForm.js
 import React, { useState } from 'react';
 
 function ExpenseForm({ addExpense }) {
@@ -32,38 +33,53 @@ function ExpenseForm({ addExpense }) {
 
   return (
     <form onSubmit={handleSubmit} className="expense-form">
-      <input
-        type="text"
-        name="description"
-        value={formData.description}
-        onChange={handleChange}
-        placeholder="Description"
-        required
-      />
-      <input
-        type="number"
-        name="amount"
-        value={formData.amount}
-        onChange={handleChange}
-        placeholder="Amount"
-        required
-      />
-      <input
-        type="text"
-        name="category"
-        value={formData.category}
-        onChange={handleChange}
-        placeholder="Category"
-        required
-      />
-      <input
-        type="date"
-        name="date"
-        value={formData.date}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Add Expense</button>
+     
+      <div className="form-group">
+        <label>Description</label>
+        <input
+          type="text"
+          name="descriptionDetail"
+          value={formData.descriptionDetail || ''}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Select category</label>
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+          required
+        >
+          <option value="" disabled>Select category</option>
+          <option value="Food">Food</option>
+          <option value="">Utilities</option>
+          <option value="Personal">Personal</option>
+          <option value="Material">Material</option>
+        </select>
+      </div>
+      <div className="form-group">
+        <label>Amount (KSH)</label>
+        <input
+          type="number"
+          name="amount"
+          value={formData.amount}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Date</label>
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button type="submit">Submit</button>
     </form>
   );
 }
