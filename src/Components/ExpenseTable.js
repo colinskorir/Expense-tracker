@@ -13,7 +13,9 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
     <table className="expense-table">
       <thead>
         <tr>
-          
+          <th onClick={() => sortExpenses('description')}>
+            Name
+          </th>
           <th onClick={() => sortExpenses('descriptionDetail')}>
             Description
           </th>
