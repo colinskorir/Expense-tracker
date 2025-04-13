@@ -38,5 +38,12 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
               >
                 Delete
               </button>
-          
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
 
+export default ExpenseTable;
