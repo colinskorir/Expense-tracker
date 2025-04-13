@@ -1,4 +1,3 @@
-// src/components/ExpenseTable.js
 import React from 'react';
 
 function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
