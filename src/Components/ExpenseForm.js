@@ -16,4 +16,13 @@ function ExpenseForm({ addExpense }) {
       formData.amount &&
       formData.category &&
       formData.date
-    ) 
+    ) {
+      addExpense(formData);
+      setFormData({
+        description: '',
+        amount: '',
+        category: '',
+        date: '',
+      });
+    }
+  };
