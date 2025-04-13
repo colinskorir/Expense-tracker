@@ -49,4 +49,24 @@ function ExpenseForm({ addExpense }) {
         placeholder="Amount"
         required
       />
-      
+      <input
+        type="text"
+        name="category"
+        value={formData.category}
+        onChange={handleChange}
+        placeholder="Category"
+        required
+      />
+      <input
+        type="date"
+        name="date"
+        value={formData.date}
+        onChange={handleChange}
+        required
+      />
+      <button type="submit">Add Expense</button>
+    </form>
+  );
+}
+
+export default ExpenseForm;
