@@ -32,5 +32,11 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
             <td>{expense.category}</td>
             <td>{expense.date}</td>
             <td>
-}
+              <button
+                onClick={() => deleteExpense(expense.id)}
+                className="delete-btn"
+              >
+                Delete
+              </button>
+          
 
