@@ -42,3 +42,37 @@ h1 {
   border-radius: 4px;
 }
 
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.expense-table th {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.expense-table th:hover {
+  background-color: #e0e0e0;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
+}
