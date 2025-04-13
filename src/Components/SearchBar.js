@@ -11,3 +11,4 @@ function SearchBar({ setSearchTerm }) {
   );
 }
 
+export default SearchBar;
