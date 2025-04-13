@@ -8,3 +8,20 @@ function ExpenseTable({ expenses, deleteExpense, setExpenses }) {
     );
     setExpenses(sortedExpenses);
   };
+
+  return (
+    <table className="expense-table">
+      <thead>
+        <tr>
+          <th onClick={() => sortExpenses('description')}>
+            Description 
+          </th>
+          <th>Amount</th>
+          <th onClick={() => sortExpenses('category')}>
+            Category 
+          </th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      
