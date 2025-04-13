@@ -8,3 +8,12 @@ function ExpenseForm({ addExpense }) {
     category: '',
     date: '',
   });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      formData.description &&
+      formData.amount &&
+      formData.category &&
+      formData.date
+    ) 
